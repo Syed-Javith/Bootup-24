@@ -20,3 +20,6 @@ code {
 .title{
   font-weight: bold;
 }
+.food-item{
+  display: flex;
+}

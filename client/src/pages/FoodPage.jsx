@@ -15,7 +15,7 @@ const FoodPage = () => {
     })
     return (
         <div>
-            <button disabled={} ></button>
+            <button  ></button>
             {
                 foods.map((food) => {
                     return <div className='container'>

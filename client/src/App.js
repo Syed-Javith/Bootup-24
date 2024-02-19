@@ -8,6 +8,7 @@ import AuthPage from './pages/AuthPage';
 import FoodPage from './pages/FoodPage';
 import FoodItem from './pages/FoodItem';
 import ProfilePage from './pages/ProfilePage';
+import AddFood from './pages/AddFood';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/foods' element={<FoodPage />} />
         <Route path='/foods/:id' element={<FoodItem />} />
         <Route path='/profile' element={<ProfilePage />} />
+        <Route path='/addfood' element={<AddFood/>}/>
       </Routes>
     </Router>
   );
