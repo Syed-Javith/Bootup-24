@@ -25,6 +25,7 @@ const postSchema = mongoose.Schema({
         type: String,
         require: true
     },
+    code : String ,
     foods: String
 })
 
