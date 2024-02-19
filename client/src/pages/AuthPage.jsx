@@ -2,9 +2,11 @@ import React from 'react'
 import { useState } from 'react';
 import axios from 'axios'
 import Cookies from 'universal-cookie'
+import { useNavigate } from 'react-router-dom'
 const AuthPage = () => {
 
   const [showLogin, setShowLogin] = useState(true);
+  const navigate = useNavigate();
   const cookies = new Cookies()
 
   const toggleForm = () => {
@@ -19,7 +21,8 @@ const AuthPage = () => {
       const data = { email, password }
       const res = await axios.post('http://localhost:8000/auth/login', data);
       if (res.status === 200) {
-        cookies.set('user', res.data)
+        cookies.set('user', res.data , { path : '/' });
+        navigate('/foods')
       }
     } catch (error) {
       console.log(error);
